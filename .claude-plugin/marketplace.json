@@ -1,0 +1,13 @@
+{
+  "name": "graphhopper-routing",
+  "owner": {
+    "name": "yangben2019"
+  },
+  "plugins": [
+    {
+      "name": "graphhopper-routing",
+      "source": "./",
+      "description": "Self-hosted OSM routing: deploy GraphHopper, route trains with OpenRailRouting, and route cars and trucks."
+    }
+  ]
+}

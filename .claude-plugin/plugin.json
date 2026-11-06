@@ -1,0 +1,8 @@
+{
+  "name": "graphhopper-routing",
+  "description": "Self-hosted OSM routing: deploy GraphHopper, route trains with OpenRailRouting, and route cars and trucks.",
+  "author": {
+    "name": "yangben2019"
+  },
+  "license": "MIT"
+}
