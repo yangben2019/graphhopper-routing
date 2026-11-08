@@ -9,7 +9,7 @@ Take a user from "I have a .pbf file" to "I can curl a route", and diagnose the 
 
 ## Language
 
-Reply in the language the user wrote in. Keep commands, config keys, paths, profile names and error text exactly as they appear — translating a YAML key or a stack trace makes it unusable.
+Reply in the language the user wrote in. Keep commands, config keys, paths, profile names and error text exactly as they appear — translating a YAML key or a stack trace makes it unusable. Translate section headings and prose, not identifiers.
 
 ## 中文说明
 

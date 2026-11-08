@@ -9,7 +9,7 @@ OpenRailRouting is a GraphHopper fork for railways (Geofabrik + SNCF, Apache-2.0
 
 ## Language
 
-Reply in the language the user wrote in. Keep profile names, encoded values, custom model filenames and commands exactly as they are — they are identifiers, not prose.
+Reply in the language the user wrote in. Keep profile names, encoded values, custom model filenames and commands exactly as they are — they are identifiers, not prose. Translate headings and explanations, never identifiers.
 
 ## 中文说明
 

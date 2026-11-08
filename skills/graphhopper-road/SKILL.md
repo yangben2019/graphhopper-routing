@@ -9,7 +9,7 @@ Stock GraphHopper has no railway baggage: the graph is large, the profiles are s
 
 ## Language
 
-Reply in the language the user wrote in. Keep encoded value names, config keys and commands in English — they are identifiers, not prose.
+Reply in the language the user wrote in. Keep encoded value names, config keys and commands in English — they are identifiers, not prose. Translate headings and explanations, never identifiers.
 
 ## 中文说明
 
