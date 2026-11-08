@@ -7,6 +7,10 @@ description: Deploy a self-hosted OpenStreetMap routing service from a .pbf file
 
 Take a user from "I have a .pbf file" to "I can curl a route", and diagnose the three places this normally breaks: the import, the CH preparation, and the first request.
 
+## Language
+
+Reply in the language the user wrote in. Keep commands, config keys, paths, profile names and error text exactly as they appear — translating a YAML key or a stack trace makes it unusable.
+
 ## Ask these before touching anything
 
 1. **Which engine?** Stock GraphHopper (roads) or OpenRailRouting (railways)? They are different jars with different configs.

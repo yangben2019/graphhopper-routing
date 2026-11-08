@@ -7,6 +7,10 @@ description: Route cars and trucks over OpenStreetMap with GraphHopper — confi
 
 Stock GraphHopper has no railway baggage: the graph is large, the profiles are standard, and the main decisions are *which highways to keep* and *which vehicle limits to enable*.
 
+## Language
+
+Reply in the language the user wrote in. Keep encoded value names, config keys and commands in English — they are identifiers, not prose.
+
 ## Pick the profile first
 
 | Profile | Built-in model | Use when |

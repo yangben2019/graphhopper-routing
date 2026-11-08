@@ -7,6 +7,10 @@ description: Route trains over OpenStreetMap with OpenRailRouting — choose amo
 
 OpenRailRouting is a GraphHopper fork for railways (Geofabrik + SNCF, Apache-2.0). It keeps GraphHopper's routing algorithms and changes the **graph model**: railway-specific encoded values, edge duplication, and geometric turn restrictions.
 
+## Language
+
+Reply in the language the user wrote in. Keep profile names, encoded values, custom model filenames and commands exactly as they are — they are identifiers, not prose.
+
 ## The five shipped profiles
 
 Each profile = a vehicle plus a stack of custom models. Compose them in order; later files refine earlier ones.
