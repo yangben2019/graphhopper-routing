@@ -1,6 +1,6 @@
 ---
 name: graphhopper-selfhost
-description: Deploy a self-hosted OpenStreetMap routing service from a .pbf file — import the graph, prepare Contraction Hierarchies, start the HTTP API, and verify it with a real request instead of reading logs. Use when the user wants to run GraphHopper or OpenRailRouting on their own machine, mentions 自托管路径规划, OSM pbf, graph-cache, import, serve, 部署 routing service, or asks why an import failed, why the service returns nothing, or how much memory it needs.
+description: Deploy a self-hosted OpenStreetMap routing service from a .pbf file — import the graph, prepare Contraction Hierarchies, start the HTTP API, and verify it with a real request instead of reading logs. Use when the user wants to run GraphHopper or OpenRailRouting on their own machine, or asks why an import failed, why the service returns nothing, or how much memory it needs.
 ---
 
 # Self-hosted OSM routing
@@ -10,6 +10,18 @@ Take a user from "I have a .pbf file" to "I can curl a route", and diagnose the 
 ## Language
 
 Reply in the language the user wrote in. Keep commands, config keys, paths, profile names and error text exactly as they appear — translating a YAML key or a stack trace makes it unusable.
+
+## 中文说明
+
+把一个 pbf 变成能 curl 的路由服务，并判断它卡在哪一步。
+
+1. **先问清**：哪个引擎（GraphHopper / OpenRailRouting）、pbf 多大、内存多少、jar 有没有
+2. **写最小配置**：只开需要的 profile，端口改掉，`bind_host` 默认 localhost
+3. **导入**：解析 pbf + 建图 + CH 预计算，第二段最慢也最吃内存
+4. **验证**：起服务后发一条真实请求看 `distance`/`time`，而不是"日志没报错"
+5. **排障**：OOM 多半在 CH 阶段；改配置必须删 `graph-cache` 重导
+
+实测参考：1,292 MB 的中国 pbf，铁路图带 5 个 CH 只有 228 MB。
 
 ## Ask these before touching anything
 

@@ -1,6 +1,6 @@
 ---
 name: graphhopper-road
-description: Route cars and trucks over OpenStreetMap with GraphHopper — configure car, truck and hgv profiles, enable vehicle-limit encoded values, choose which highways to ignore, and verify the result. Use when the user mentions 公路路径规划, 自驾路线, 货车导航, car routing, truck routing, hgv, max_height, max_weight, hazmat, 限高限重, or wants to build a road routing service from an .osm.pbf file.
+description: Route cars and trucks over OpenStreetMap with GraphHopper — configure car, truck and hgv profiles, enable vehicle-limit encoded values, choose which highways to ignore, and verify the result. Use when the user mentions car routing, truck routing, hgv, max_height, max_weight, hazmat, or wants to build a road routing service from an .osm.pbf file.
 ---
 
 # Road routing
@@ -10,6 +10,15 @@ Stock GraphHopper has no railway baggage: the graph is large, the profiles are s
 ## Language
 
 Reply in the language the user wrote in. Keep encoded value names, config keys and commands in English — they are identifiers, not prose.
+
+## 中文说明
+
+用原版 GraphHopper 做公路路由。
+
+1. **先选 profile**：car / truck / hgv，每多一个进 `profiles_ch` 就多一份导入时间和内存
+2. **`import.osm.ignored_highways`** 是控制图大小最有效的手段
+3. **货车的限高限重是 encoded value**，必须在导入前启用，事后加不了
+4. **验证**：GET 用 `point=lat,lon`，POST 用 `[lon,lat]`，写反会返回一条看起来正常的错路
 
 ## Pick the profile first
 

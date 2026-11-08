@@ -1,6 +1,6 @@
 ---
 name: graphhopper-rail
-description: Route trains over OpenStreetMap with OpenRailRouting — choose among the five shipped profiles (tgv_all, non_tgv, tramtrain, all_tracks, all_tracks_1435), compose the eight custom models, and explain why a connected track still returns no path. Use when the user mentions railway routing, 铁路路径规划, 高铁, 轨道, train routing, rail_access, gauge, voltage, electrified, preferred_direction, or asks why a rail route is missing, slower than expected, or avoids the obvious line.
+description: Route trains over OpenStreetMap with OpenRailRouting — choose among the five shipped profiles (tgv_all, non_tgv, tramtrain, all_tracks, all_tracks_1435), compose the eight custom models, and explain why a connected track still returns no path. Use when the user mentions railway routing, train routing, rail_access, gauge, voltage, electrified, preferred_direction, or asks why a rail route is missing, slower than expected, or avoids the obvious line.
 ---
 
 # Railway routing
@@ -10,6 +10,16 @@ OpenRailRouting is a GraphHopper fork for railways (Geofabrik + SNCF, Apache-2.0
 ## Language
 
 Reply in the language the user wrote in. Keep profile names, encoded values, custom model filenames and commands exactly as they are — they are identifiers, not prose.
+
+## 中文说明
+
+OpenRailRouting 的铁路路由。五个 profile：`tgv_all` / `non_tgv` / `tramtrain` / `all_tracks` / `all_tracks_1435`，由八个 custom model 叠加而成。
+
+最容易踩的三点：
+
+1. **线路连着却算不出路** —— 转角超过 135° 被禁止；`railway=railway_crossing` 只许直穿
+2. **时间不对** —— 速度按 `usage`/`service` 推断，没打 `maxspeed` 的路段会落到 25 km/h
+3. **改了模型不生效** —— 权重在导入时烘进图里，必须重导
 
 ## The five shipped profiles
 
