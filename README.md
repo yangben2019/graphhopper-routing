@@ -17,12 +17,6 @@ Three Claude Code skills that take you from "I have a map file" to "I can curl a
 | **graphhopper-rail** | Railway routing with OpenRailRouting: the five shipped profiles, the eight custom models and how they compose, the railway-specific encoded values, and the two behaviours that explain most "that route is wrong" reports — geometric turn restrictions and inferred speeds. |
 | **graphhopper-road** | Car and truck routing with stock GraphHopper: profile choice, which highways to discard, truck limit encoded values, country default speeds, and how to verify that the route is actually sane. |
 
-### 中文简介
-
-- **自托管部署**：从 pbf 到 `/route` 可用，含内存规划、CH 预计算、排障表。
-- **铁路路径规划**：OpenRailRouting 的 5 个 profile、8 个 custom model、轨距/电压/电气化编码值，以及「线路连着却算不出路」的真实原因。
-- **公路路径规划**：car / truck / hgv，限高限重、危险品、国家默认限速。
-
 ---
 
 ## Install
@@ -58,7 +52,8 @@ cp -r /tmp/gh/skills/* ~/.claude/skills/
 ## Usage
 
 ```text
-我下载了 china-latest.osm.pbf，想在本机起一个铁路路径规划服务，内存 32G。
+I downloaded china-latest.osm.pbf and want to stand up a railway routing
+service on this machine. It has 32 GB of RAM.
 ```
 
 ```text
